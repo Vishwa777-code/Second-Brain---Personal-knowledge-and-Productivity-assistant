@@ -1,0 +1,51 @@
+AI Agents: A Comprehensive Overview
+====================================
+
+What Are AI Agents?
+-------------------
+AI agents are autonomous software systems that can perceive their environment,
+make decisions, and take actions to achieve specific goals. Unlike traditional
+software that follows predefined rules, AI agents leverage machine learning and
+natural language processing to adapt their behavior based on context.
+
+Key Components of an AI Agent
+-----------------------------
+1. **Perception Module** — Gathers input from the environment (text, images,
+   sensor data, APIs, etc.).
+2. **Reasoning Engine** — Processes information, draws inferences, and plans
+   a course of action.  Common approaches include chain-of-thought prompting,
+   ReAct (Reason + Act), and tree-of-thought search.
+3. **Memory** — Stores short-term context (current conversation) and long-term
+   knowledge (past interactions, user preferences, domain facts).
+4. **Action Module** — Executes decisions by calling tools, generating text,
+   sending emails, writing code, or interacting with external services.
+
+Popular Agent Frameworks (2024-2025)
+------------------------------------
+- **LangChain / LangGraph** — Python-based, tool-use and chain orchestration.
+- **AutoGen (Microsoft)** — Multi-agent conversation framework.
+- **CrewAI** — Role-based agent collaboration.
+- **OpenAI Assistants API** — Cloud-hosted agents with built-in tools.
+
+Use Cases
+---------
+- Personal productivity assistants (e.g., "Second Brain" apps)
+- Customer support chatbots with tool access
+- Automated research and report generation
+- Code generation and debugging assistants
+- Data analysis pipelines with natural-language interfaces
+
+Challenges
+----------
+- Hallucination and factual accuracy
+- Cost management for LLM API calls
+- Security when agents execute code or access external systems
+- Evaluation and testing of non-deterministic outputs
+
+The Future of AI Agents
+-----------------------
+The trend is moving toward multi-agent systems where specialized agents
+collaborate — one handles research, another drafts documents, a third
+manages schedules — coordinated by a central "orchestrator" agent.  This
+architecture mirrors how human teams work and scales better than a single
+monolithic model trying to do everything.

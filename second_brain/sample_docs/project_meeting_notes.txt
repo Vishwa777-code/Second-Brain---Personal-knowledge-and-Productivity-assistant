@@ -1,0 +1,38 @@
+Project Meeting Notes — Second Brain Capstone
+==============================================
+Date: August 2026
+Attendees: Vishwa, Project Mentor, Team Lead
+
+Agenda
+------
+1. Review current architecture
+2. Discuss deployment strategy
+3. Plan demo presentation
+
+Architecture Review
+-------------------
+- The app uses a coordinator pattern to route user requests to specialized
+  agents (notes, tasks, email, research, knowledge base, briefing).
+- LLM backend: Google Gemini (gemini-3.5-flash-lite) via LangChain.
+- Vector store: ChromaDB with HuggingFace sentence-transformers embeddings.
+- Database: SQLite for notes, tasks, email drafts, and conversation history.
+- Frontend: Streamlit with tabs for chat, email, briefing, and stats.
+
+Key Decisions
+-------------
+- Use SMTP (Gmail App Passwords) for email sending — simpler than full OAuth.
+- Include mock inbox data so the app works in demo mode without live Gmail.
+- Structured outputs via Pydantic models for email drafts and daily briefings.
+- RAG pipeline uses recursive character text splitter with 800-char chunks.
+
+Action Items
+------------
+- [ ] Add sample documents to sample_docs/ for grading
+- [ ] Fix any deprecation warnings before deployment
+- [ ] Deploy to Streamlit Community Cloud
+- [ ] Record a short demo video
+- [ ] Write up the user guide section in the README
+
+Next Meeting
+------------
+Final review before submission deadline.
